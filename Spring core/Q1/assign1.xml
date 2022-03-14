@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+           
+          <bean id="customer" class="springcore_example.Custoemrq1">
+          <property name="customerId" value="001"/>
+          <property name="customerName" value="Mohsin"/>
+          <property name="customerContact" value="7010123456"/>
+          <property name="customerAddress" ref="custAddress"/>
+
+      </bean>
+      <bean id="custAddress" class="springcore_example.Addressq1">
+          <property name="street" value="Abc"/>
+          <property name="city" value="Chennai"/>
+          <property name="state" value="TamilNadu"/>
+          <property  name="country" value="India"/>
+          <property name="zip" value="600026" />
+      </bean>
+
+
+
+                                <!-- Using constructor injection -->
+    <bean id="customerCon" class = "springcore_example.Custoemrq1">
+        <constructor-arg  type ="int" value="002"/>
+        <constructor-arg value="Basha"/>
+        <constructor-arg value="9432678912"/>
+        <constructor-arg ref="custAddressCon"/>
+    </bean>
+    <bean id="custAddressCon" class="springcore_example.Addressq1">
+        <constructor-arg value="SSS"/>
+        <constructor-arg value="Chennai"/>
+        <constructor-arg value="TamilNadu"/>
+        <constructor-arg value="India"/>
+        <constructor-arg value="608001" />
+    </bean>  
+
+<context:annotation-config>
+</context:annotation-config>
+</beans>

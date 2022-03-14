@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!-- here we have given default values in the beans itself so instaed of defining intimethod n destroymethod for ean h every bean we can configure it 
+globally  as shown below-->
+<beans default-init-method="myInit"  default-destroy-method="Destroy">
+<!-- so in order to initalize inti n destroy bean we can confiure it in the xml itself -->
+<!-- here we gotta mention the intmethodvalue n then pass the name of the method -->
+<!-- here the advanatge is that we dont hve to implment any iterface like initilze bean in the traingle_init object itsled we can 
+we r just mentioning wahts the method hte pring has to run as an initmethid n if hte value i.e myInit method whihc we have created in 
+the circl_init object then for the beanid="circle" its gonna run this myInit method upon initialization-->
+<!-- <bean id="circle" class="springcore_example.Circle_initdestroy_lifecycle" autowire="byName" init-method="myInit" destroy-method="Destroy">-->
+<bean id="circle" class="springcore_example.Circle_initdestroy_lifecycle" autowire="byName">
+</bean>
+<!-- this creates an object of the point class with  x n y set as zero-->
+<!-- here we have defeind threee three pts objects -->
+<bean id="ptA" class="springcore_example.Point_initdestrroy_lifecycle">
+<property name="x" value="0" />
+<property name="y" value="0" />
+</bean>
+
+<bean id="ptB" class="springcore_example.Point_initdestrroy_lifecycle">
+<property name="x" value="-20" />
+<property name="y" value="0" />
+</bean>
+
+<bean id="ptC" class="springcore_example.Point_initdestrroy_lifecycle">
+<property name="x" value="0" />
+<property name="y" value="20" />
+</bean>
+
+
+
+</beans>

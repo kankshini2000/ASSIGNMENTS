@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="circle" class="springcore_example.Circle_lifecycle">
+<property name="ptA" ref="zeropt"/>
+<property name="ptB" ref="zeropt2"/>
+<property name="ptC" ref="zeropt3"/>
+</bean>
+<!-- this creates an object of the point class with  x n y set as zero-->
+<!-- here we have defeind threee three pts objects -->
+<bean id="zeropt" class="springcore_example.Point_lifecycle">
+<property name="x" value="0" />
+<property name="y" value="0" />
+</bean>
+
+<bean id="zeropt2" class="springcore_example.Point_lifecycle">
+<property name="x" value="-20" />
+<property name="y" value="0" />
+</bean>
+
+<bean id="zeropt3" class="springcore_example.Point_lifecycle">
+<property name="x" value="0" />
+<property name="y" value="20" />
+</bean>
+
+
+
+</beans>
