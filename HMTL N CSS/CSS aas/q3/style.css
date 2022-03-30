@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+  }
+ h1 {
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    text-transform: capitalize;
+  }
+  
+  h3 {
+    text-transform: capitalize;
+  } 
