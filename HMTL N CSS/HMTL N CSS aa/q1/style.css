@@ -1,0 +1,34 @@
+body{
+    background-image:url(v983batch2-021-x.jpg) ;
+    background-size: cover;
+}
+img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+h1.title {
+    font-size: 50px;
+    color: palevioletred;
+            text-align: center;
+            text-shadow: 5px 5px 10px white;
+}
+h1.title-dips{
+    font-size: 35px;
+    color: white;
+            text-align: center;
+            text-shadow: 5px 5px 10px royalblue;
+}
+#dips-links {
+    text-decoration: none;
+    color: black;
+}
+div#tribute-data {
+    background-color: white;
+    box-shadow: 20px 20px 20px palevioletred;
+    font-family: Georgia;
+    padding: 25px 25px;
+    margin: 11px;
+    margin-top: 50px;
+}
